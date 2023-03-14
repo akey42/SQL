@@ -1,0 +1,28 @@
+--Create a grocery store database.
+
+CREATE TABLE "movie_store" (id INTEGER PRIMARY KEY, movie TEXT, price INTEGER, rating INTEGER, quantity INTEGER);
+
+INSERT INTO "movie_store" VALUES (1, "Divergent", 3.99, 6, 13);
+INSERT INTO "movie_store" VALUES (2, "Let it Go", 5.99, 8, 17);
+INSERT INTO "movie_store" VALUES (3, "21 Jump Street", 4.99, 7, 15);
+INSERT INTO "movie_store" VALUES (4, "The Grinch", 6.99, 9, 18);
+INSERT INTO "movie_store" VALUES (5, "The Longest Yard", 4.99, 10, 11);
+INSERT INTO "movie_store" VALUES (6, "The Vault", 3.99, 5, 19);
+INSERT INTO "movie_store" VALUES (7, "A Christmas Story", 5.99, 7, 17); 
+INSERT INTO "movie_store" VALUES (8, "Grown Ups", 4.99, 9, 14);
+INSERT INTO "movie_store" VALUES (9, "Hunger Games", 6.99, 8, 17); 
+INSERT INTO "movie_store" VALUES (10, "Project Power", 3.99, 6, 14);
+INSERT INTO "movie_store" VALUES (11, "Uncharterd", 5.99, 7, 18);
+INSERT INTO "movie_store" VALUES (12, "Mile 22", 6.99, 9, 12);
+INSERT INTO "movie_store" VALUES (13, "30 Minutes or Less", 5.99, 7, 16);
+INSERT INTO "movie_store" VALUES (14, "Red Notice", 5.99, 6, 15);
+INSERT INTO "movie_store" VALUES (15, "Code 8", 3.99, 7, 12);
+
+--Display the database ordered by price.
+SELECT * FROM "movie_store" ORDER BY price;
+
+--Which movies have a higher rating than 6?
+SELECT * FROM "movie_store" WHERE rating > 6 ORDER BY rating;
+
+--What is the sum price of all movies from the store?
+SELECT SUM(price) FROM "movie_store";
